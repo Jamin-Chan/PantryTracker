@@ -37,3 +37,4 @@ next-env.d.ts
 
 # keys
 firebaseKeys.js
+.env
