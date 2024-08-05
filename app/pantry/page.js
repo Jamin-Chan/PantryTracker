@@ -95,7 +95,8 @@ export default function Pantry() {
                     position={"absolute"} 
                     padding={3} 
                     display={'flex'} 
-                    justifyContent={"space-between"} 
+                    justifyContent={"space-between"}
+                    justifyItems={"stretch"}
                     flexDirection={"row"}
                     zIndex={99}
                 >
@@ -103,17 +104,20 @@ export default function Pantry() {
                     🛒 Pantry Tracker
                     </Typography>
                     <TextField
+                        justifyContent="center"
                         variant="outlined"
                         placeholder="Search items..."
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
+                        inputProps={{ style: { backgroundColor: "white" } }}
                         sx={{ width: "400px" }}
                     />
                     <Box display={"flex"} alignItems={"center"} columnGap={2}>
                         <TextField
                             variant="outlined"
                             placeholder="Add items..."
-                            value={itemName}
+                            value={itemName} 
+                            inputProps={{ style: { backgroundColor: "white" } }}
                             onChange={(e) => setItemName(e.target.value)}
                         />
                         <Button variant="contained"
@@ -133,9 +137,10 @@ export default function Pantry() {
                 display={'flex'} 
                 bgcolor={"#85ffbc"}
                 justifyContent={'center'}
+                justifyItems={"center"}
                 alignItems={'end'}
             >
-                <Typography variant={'h2'} color={'#333'} textAlign={'center'}>
+                <Typography variant={'h2'} color={'#333'} paddingRight={2}>
                     Pantry Items
                 </Typography>
             </Box>
